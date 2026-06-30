@@ -1,1 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mission 2</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+background:linear-gradient(135deg,#8E2DE2,#4A00E0);
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+color:white;
+}
+
+.box{
+
+background:white;
+color:black;
+padding:30px;
+border-radius:20px;
+width:500px;
+text-align:center;
+
+}
+
+.progress{
+
+width:100%;
+height:15px;
+background:#ddd;
+border-radius:20px;
+margin-bottom:20px;
+
+}
+
+.bar{
+
+height:15px;
+width:20%;
+background:green;
+border-radius:20px;
+
+}
+
+button{
+
+width:100%;
+padding:15px;
+margin-top:15px;
+font-size:18px;
+cursor:pointer;
+
+}
+
+#result{
+
+margin-top:20px;
+font-size:20px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="box">
+
+<h2>Mission 2 ❤️</h2>
+
+<div class="progress">
+
+<div class="bar" id="bar"></div>
+
+</div>
+
+<h3 id="question"></h3>
+
+<div id="options"></div>
+
+<p id="result"></p>
+
+</div>
+
+<script>
+
+const quiz=[
+
+{
+
+q:"My Favourite Colour?",
+
+o:["Blue","Pink","Black","Green"],
+
+a:"Pink"
+
+},
+
+{
+
+q:"Favourite Chocolate?",
+
+o:["KitKat","Dairy Milk","Munch","Five Star"],
+
+a:"Dairy Milk"
+
+},
+
+{
+
+q:"Favourite Season?",
+
+o:["Summer","Winter","Rainy","Spring"],
+
+a:"Winter"
+
+},
+
+{
+
+q:"Favourite Animal?",
+
+o:["Dog","Cat","Rabbit","Horse"],
+
+a:"Dog"
+
+},
+
+{
+
+q:"Who is the Best Sister?",
+
+o:["Me ❤️","Someone Else","Nobody","Friend"],
+
+a:"Me ❤️"
+
+}
+
+];
+
+let current=0;
+
+showQuestion();
+
+function showQuestion(){
+
+document.getElementById("question").innerHTML=quiz[current].q;
+
+let html="";
+
+quiz[current].o.forEach(option=>{
+
+html+=`<button onclick="check('${option}')">${option}</button>`;
+
+});
+
+document.getElementById("options").innerHTML=html;
+
+document.getElementById("bar").style.width=((current+1)*20)+"%";
+
+}
+
+function check(ans){
+
+if(ans==quiz[current].a){
+
+current++;
+
+if(current==quiz.length){
+
+window.location.href="mission3.html";
+
+}
+
+else{
+
+showQuestion();
+
+}
+
+}
+
+else{
+
+document.getElementById("result").innerHTML="❌ Wrong Answer";
+
+}
+
+}
+
+</script>
+
+</body>
+
+</html>
