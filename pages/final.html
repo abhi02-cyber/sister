@@ -1,1 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Sister ❤️</title>
 
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+
+background:linear-gradient(135deg,#ff4e50,#fc913a);
+
+overflow:hidden;
+
+color:white;
+
+text-align:center;
+
+}
+
+h1{
+
+font-size:60px;
+animation:zoom 2s infinite alternate;
+
+}
+
+p{
+
+font-size:26px;
+margin-top:20px;
+
+}
+
+@keyframes zoom{
+
+from{
+
+transform:scale(1);
+
+}
+
+to{
+
+transform:scale(1.08);
+
+}
+
+}
+
+.heart{
+
+position:absolute;
+
+font-size:30px;
+
+animation:float 8s linear infinite;
+
+}
+
+@keyframes float{
+
+0%{
+
+transform:translateY(100vh);
+
+opacity:0;
+
+}
+
+100%{
+
+transform:translateY(-100px);
+
+opacity:1;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>🎉 Happy Birthday Sister 🎂❤️</h1>
+
+<p>
+
+May your life always be filled with happiness, success and lots of smiles.
+
+</p>
+
+<h2 style="margin-top:35px;">❤️ Your Brother ❤️</h2>
+
+<script>
+
+for(let i=0;i<35;i++){
+
+let heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.animationDuration=(Math.random()*5+5)+"s";
+
+heart.style.fontSize=(Math.random()*25+20)+"px";
+
+document.body.appendChild(heart);
+
+}
+
+</script>
+
+</body>
+
+</html>
