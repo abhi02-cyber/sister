@@ -1,1 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mission 3</title>
 
+<style>
+
+body{
+
+margin:0;
+font-family:Arial;
+background:linear-gradient(135deg,#ff9966,#ff5e62);
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+color:white;
+
+}
+
+.container{
+
+text-align:center;
+
+}
+
+.gifts{
+
+display:flex;
+gap:40px;
+margin-top:50px;
+justify-content:center;
+
+}
+
+.gift{
+
+font-size:100px;
+cursor:pointer;
+transition:.3s;
+
+}
+
+.gift:hover{
+
+transform:scale(1.2);
+
+}
+
+#msg{
+
+margin-top:40px;
+font-size:28px;
+font-weight:bold;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🎁 Mission 3</h1>
+
+<h2>Find the Surprise Gift</h2>
+
+<div class="gifts">
+
+<div class="gift" onclick="wrong()">🎁</div>
+
+<div class="gift" onclick="correct()">🎁</div>
+
+<div class="gift" onclick="wrong()">🎁</div>
+
+</div>
+
+<p id="msg"></p>
+
+</div>
+
+<script>
+
+function wrong(){
+
+document.getElementById("msg").innerHTML="😂 Oops! Empty Gift Box";
+
+}
+
+function correct(){
+
+document.getElementById("msg").innerHTML="🎉 Congratulations!";
+
+setTimeout(function(){
+
+window.location.href="mission4.html";
+
+},2000);
+
+}
+
+</script>
+
+</body>
+
+</html>
