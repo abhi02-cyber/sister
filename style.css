@@ -93,3 +93,15 @@ transform:translateY(-15px);
 }
 
 }
+.slider{
+margin-top:30px;
+}
+
+.slider img{
+width:300px;
+height:380px;
+object-fit:cover;
+border-radius:20px;
+border:5px solid white;
+box-shadow:0 0 20px rgba(255,255,255,.6);
+}
