@@ -124,7 +124,27 @@ May your life always be filled with happiness, success and lots of smiles.
 <script>
 
 for(let i=0;i<35;i++){
+const photos=[
+"../assets/photos/photo1.jpg",
+"../assets/photos/photo2.jpg",
+"../assets/photos/photo3.jpg",
+"../assets/photos/photo4.jpg",
+"../assets/photos/photo5.jpg"
+];
 
+let photoIndex=0;
+
+setInterval(function(){
+
+photoIndex++;
+
+if(photoIndex>=photos.length){
+photoIndex=0;
+}
+
+document.getElementById("photo").src=photos[photoIndex];
+
+},3000);
 let heart=document.createElement("div");
 
 heart.className="heart";
